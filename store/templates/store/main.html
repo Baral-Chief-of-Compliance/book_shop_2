@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type = "text/css" href="{% static 'css/main.css' %}">
+  </head>
+  <body>
+
+    <div class="header-navigation" id = "myTopnav">
+      <a href="{% url 'store' %}">Store</a>
+    <div class="cart-form">
+
+      <a href="{% url 'cart' %}">Корзина</a>
+      <p id="cart-total">0</p>
+
+    </div>
+    </div>
+      {% block content %}
+
+      {% endblock %}
+  </body>
+</html>

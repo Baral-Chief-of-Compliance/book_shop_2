@@ -1,0 +1,44 @@
+{% extends 'store/main.html' %}
+{% load static %}
+
+{% block title %}Cart{% endblock %}
+
+
+{% block content%}
+
+
+<h3>Cart</h3>
+<a href="{% url 'store' %}">Продолжить покупки</a>
+<div class="table">
+  Items: <strong>3</strong>
+  Total: <strong>400 рублей</strong>
+  <a href="{% url 'checkout' %}">Чек</a>
+</div>
+<div class="">
+  <div class="cart-row">
+    <div class="">
+      Image
+    </div>
+    <div class="">
+      Item
+    </div>
+    <div class="">
+      Price: {{ order.get_cart_total }}
+    </div>
+    <div class="">
+      Количество: {{ order.get_cart_items }}
+    </div>
+    <div class="">
+      Total
+    </div>
+  </div>
+</div>
+<div class="">
+  {% for item in items %}
+    <img src="{{ item.product.imgURL }}" alt=""><br>
+    {{ item.product.name }}<br>
+    {{ item.get_total }} ₽<br>
+    {{ item.quantity }}<br>
+  {% endfor %}
+</div>
+{% endblock %}

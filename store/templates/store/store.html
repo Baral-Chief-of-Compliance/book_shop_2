@@ -1,0 +1,19 @@
+{% extends 'store/main.html' %}
+{% load static %}
+
+{% block title %}Chekout{% endblock %}
+
+
+{% block content%}
+
+
+<h3>store</h3>
+{% for product in products %}
+
+  {{ product.name }}
+  <img src="{{ product.imgURL }}" alt="">
+  цена:{{ product.price }} ₽<br>
+
+{% endfor %}
+
+{% endblock %}
