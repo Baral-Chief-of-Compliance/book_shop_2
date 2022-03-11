@@ -20,5 +20,11 @@
       {% block content %}
 
       {% endblock %}
+      <script type="text/javascript" src = "{% static 'js/cart.js' %}"></script>
+
+      <script type="text/javascript">
+        var user = '{{ request.user }}'
+        console.log(user)
+      </script>
   </body>
 </html>
