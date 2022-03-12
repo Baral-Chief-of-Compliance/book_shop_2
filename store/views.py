@@ -13,7 +13,7 @@ def store(request):
         cartItems = order.get_cart_items
     else:
         items = []
-        order = {'get_cart_total':0, 'get_cart_items': 0}
+        order = {'get_cart_total':0, 'get_cart_items': 0, 'shipping':False}
         cartItems = order['get_cart_items']
 
 
@@ -31,7 +31,7 @@ def cart(request):
         cartItems = order.get_cart_items
     else:
         items = []
-        order = {'get_cart_total':0, 'get_cart_items': 0}
+        order = {'get_cart_total':0, 'get_cart_items': 0, 'shipping':False}
         cartItems = order['get_cart_items']
 
     context = {'items': items, 'order':order, 'cartItems':cartItems}
@@ -45,7 +45,7 @@ def checkout(request):
         items = order.orderitem_set.all()
         cartItems = order.get_cart_items
     else:
-        order = {'get_cart_total':0, 'get_cart_items':0}
+        order = {'get_cart_total':0, 'get_cart_items':0, 'shipping':False}
         cartItems = order['get_cart_items']
         items = []
     context = {'items':items, 'order':order, 'cartItems':cartItems}

@@ -13,8 +13,19 @@
   {{ item.product.name }}<br>
   {{ item.product.price}}<br>
   {{ item.quantity }}<br>
+  <div class="">
+    <img data-product = "{{ item.product.id }}" data-action="add" class = "update-cart" src="{% static 'images/up.png'%}" alt="">
+    <img data-product = "{{ item.product.id }}" data-action="remove" class = "update-cart" src="{% static 'images/down.png'%}" alt="">
+  </div>
 {% endfor %}
 
 Количество:{{ order.get_cart_items }}<br>
 Сумма заказ:{{ order.get_cart_total }}
+<script type="text/javascript">
+  var shipping = '{{ order.shipping }}'
+
+  if (shipping == 'False'){
+    document.getElementById('shipping-info').innerHTML = ''
+  }
+</script>
 {% endblock %}
