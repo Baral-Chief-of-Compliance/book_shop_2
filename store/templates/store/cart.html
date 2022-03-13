@@ -39,6 +39,10 @@
     {{ item.product.name }}<br>
     {{ item.get_total }} ₽<br>
     {{ item.quantity }}<br>
+    <div class="">
+      <img data-product = "{{ item.product.id }}" data-action="add" class = "update-cart" src="{% static 'images/up.png'%}" alt="">
+      <img data-product = "{{ item.product.id }}" data-action="remove" class = "update-cart" src="{% static 'images/down.png'%}" alt="">
+    </div>
   {% endfor %}
 </div>
 {% endblock %}
