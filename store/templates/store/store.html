@@ -11,7 +11,7 @@
 {% for product in products %}
 
   {{ product.name }}
-  <img src="{{ product.imgURL }}" alt="">
+  <img class ='img-store-preview' src="{{ product.imgURL }}" alt="">
   цена:{{ product.price }} ₽<br>
   <button data-product = "{{ product.id }}" data-action="add" class="update-cart">Add to Cart</button>
 

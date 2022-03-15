@@ -15,15 +15,46 @@
       <a href="{% url 'cart' %}">Корзина</a>
       <div class="">
         Количестов товаров:
-        
+
       </div>
       <p id="cart-total">{{ cartItems }}</p>
 
     </div>
     </div>
-      {% block content %}
+    <div class="wrapper">
+      <div class="content">
+        {% block content %}
 
-      {% endblock %}
+        {% endblock %}
+      </div>
+    </div>
+
+      <div class="footer">
+        подвал сайта
+        <div class="above-footer">
+          <div class="footer-about-company">
+            <div class="title-footer">
+              О компании
+            </div>
+            <div class="about-footer">
+                <a href="#">О «Буквоеде»</a>
+                <a href="#">Бонусная программа</a>
+                <a href="#">Открытые вакансии</a>
+            </div>
+          </div>
+        </div>
+        <div class="near-footer">
+          <div class="fr-near-footer">
+              2006-2022, ООО «Буквоед»
+          </div>
+          <div class="sc-near-footer">
+            Мы принимаем к оплате:
+          </div>
+          <div class="th-near-footer">
+            Мы заботимся о вашей безопасности
+          </div>
+        </div>
+      </div>
       <script type="text/javascript" src = "{% static 'js/cart.js' %}"></script>
 
       <script type="text/javascript">
