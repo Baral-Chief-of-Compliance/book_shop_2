@@ -66,9 +66,11 @@
   var user = '{{ request.user }}'
 
   console.log(user)
-  if (shipping == 'False'){
-    document.getElementById('shipping-info').innerHTML = ''
-  }
+  shipping = 'True'//испраивть
+  console.log(shipping)
+  // if (shipping == 'False'){
+  //   document.getElementById('shipping-info').innerHTML = ''
+  // }
 
   if(user != 'AnonymousUser'){
     document.getElementById('user-info').innerHTML = ''
@@ -135,6 +137,10 @@
     .then((data) => {
       console.log('Success:', data);
       alert('Transaction completed');
+
+      cart = {}
+      document.cookie = 'cart=' + JSON.stringify(cart) + ";domain=;path=/"
+
       window.location.href = "{% url 'store' %}"
     })
 
