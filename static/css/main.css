@@ -35,16 +35,39 @@ html,body{
 
 .fr-near-footer{
   margin-right: 6%;
+	padding-top: 45px;
+
 }
 
 .sc-near-footer{
   margin-left: 6%;
   margin-right: 5%;
+	display: flex;
+	flex-direction: row;
+}
+
+.sc-near-footer-title{
+	padding-top: 45px;
+	padding-right: 5px;
 }
 
 .th-near-footer{
   margin-left: 5%;
+	display: flex;
+	flex-direction: row;
 }
+
+.th-near-footer-title{
+	padding-top: 45px;
+}
+
+.footer-line{
+	border-left: 2px solid #504e4f;
+  height: 250px;
+	margin-bottom: 40px;
+	padding-right: 25px;
+}
+
 
 .above-footer{
   padding-top: 30px;
@@ -60,6 +83,48 @@ html,body{
 	flex-direction: column;
 
 }
+
+.footer-information{
+	display: flex;
+	flex-direction: column;
+	padding-left: 25px;
+}
+
+.footer-information-title{
+	color: #fff;
+	padding-bottom: 20px;
+}
+
+.footer-information-number{
+	font-weight: bold;
+	color: #fff;
+	font-size: 30px;
+	padding-bottom: 20px;
+
+}
+
+.footer-information-app{
+	color: #fff;
+	padding-top: 20px;
+	padding-bottom: 5px;
+
+}
+
+.footer-information-imgs{
+	display: flex;
+	flex-direction: row;
+}
+
+.s-img{
+	padding-left: 13px;
+}
+
+.map{
+	
+}
+
+
+
 
 .footer-about-company{
 	display: flex;
@@ -85,6 +150,7 @@ html,body{
   font-size: 20px;
   margin-bottom: 15px;
 }
+
 
 .hidden{
   display: none;
