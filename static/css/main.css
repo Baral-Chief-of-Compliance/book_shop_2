@@ -119,12 +119,80 @@ html,body{
 	padding-left: 13px;
 }
 
-.map{
-	
+.header-information{
+	display: flex;
+	flex-direction: row;
+	padding-top: 15px;
 }
 
+.header-information a{
+	text-decoration: none;
+	color: black;
+}
 
+.header-information a:hover{
+	color: red;
+}
+.header-information-place{
+	padding-left: 16%;
+}
 
+.header-information-title-place{
+	padding-left: 5px;
+}
+
+.header-information-vakansii{
+	padding-left: 40%;
+}
+
+.header-information-number-imag{
+	padding-left: 20px;
+}
+
+.header-information-number{
+	padding-left: 5px;
+}
+
+.header-information-help{
+	padding-left: 20px;
+}
+
+.header-line{
+	border-bottom: 1px solid #e2e2e2;
+}
+
+form {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+}
+input {
+  width: 100%;
+  height: 42px;
+  padding-left: 10px;
+  border: 2px solid #7BA7AB;
+  border-radius: 5px;
+  outline: none;
+  background: #F9F0DA;
+  color: #9E9C9C;
+}
+button {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 42px;
+  height: 42px;
+  border: none;
+  background: #7BA7AB;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+button:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  font-size: 16px;
+  color: #F9F0DA;
+}
 
 .footer-about-company{
 	display: flex;

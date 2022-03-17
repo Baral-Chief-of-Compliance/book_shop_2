@@ -12,21 +12,36 @@
       <object type="image/svg+xml" data="{% static 'images/place.svg' %}" width="20" height="20"></object>
     </div>
     <div class="header-information-title-place">
-      Мурманск
+      <a href="#">Мурманск</a>
     </div>
     <div class="header-information-vakansii">
-      Вакансии
+      <a href="#">Вакансии</a>
     </div>
     <div class="header-information-number-imag">
       <object type="image/svg+xml" data="{% static 'images/phone.svg' %}" width="20" height="20"></object>
     </div>
     <div class="header-information-number">
-      +7 148 814-88-14
+      <a href="#">+7 148 814-88-14</a>
     </div>
     <div class="header-information-help">
-      Помощь
+      <a href="#">Помощь</a>
     </div>
   </div>
+  <div class="header-search">
+    <div class="header-logo">
+      <object type="image/svg+xml" data="{% static 'images/logo.svg' %}" width="200" height="200"></object>
+    </div>
+    <div class="header-name">
+      ЧИТАЙКА
+    </div>
+    <div class="header-search-bar">
+      <form>
+        <input type="text" placeholder="Искать здесь...">
+        <button type="submit"></button>
+    </form>
+    </div>
+  </div>
+  <div class="header-line"></div>
     <div class="header-navigation" id = "myTopnav">
       <a href="{% url 'store' %}">Store</a>
     <div class="cart-form">
