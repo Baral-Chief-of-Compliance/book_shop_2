@@ -7,7 +7,26 @@
     <link rel="stylesheet" type = "text/css" href="{% static 'css/main.css' %}">
   </head>
   <body>
-
+  <div class="header-information">
+    <div class="header-information-place">
+      <object type="image/svg+xml" data="{% static 'images/place.svg' %}" width="20" height="20"></object>
+    </div>
+    <div class="header-information-title-place">
+      Мурманск
+    </div>
+    <div class="header-information-vakansii">
+      Вакансии
+    </div>
+    <div class="header-information-number-imag">
+      <object type="image/svg+xml" data="{% static 'images/phone.svg' %}" width="20" height="20"></object>
+    </div>
+    <div class="header-information-number">
+      +7 148 814-88-14
+    </div>
+    <div class="header-information-help">
+      Помощь
+    </div>
+  </div>
     <div class="header-navigation" id = "myTopnav">
       <a href="{% url 'store' %}">Store</a>
     <div class="cart-form">
