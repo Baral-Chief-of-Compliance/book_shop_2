@@ -7,14 +7,45 @@
 {% block content%}
 
 
-<h3>store</h3>
-{% for product in products %}
 
-  {{ product.name }}
+<div class="store-slider">
+<div class="container-line">
+  <button class = 'slider-prev'></button>
+    <div class="container">
+      <div class="slider">
+        <div class="slider-line">
+          <img class = 'slider-img' src="{% static 'images/slider/1_slider.png' %}" alt="1 картинка слайдера">
+          <img class = 'slider-img' src="{% static 'images/slider/2_slider.png' %}" alt="2 картинка слайдера">
+          <img class = 'slider-img' src="{% static 'images/slider/3_slider.png' %}" alt="3 картинка слайдера">
+          <img class = 'slider-img' src="{% static 'images/slider/4_slider.png' %}" alt="4 картинка слайдера">
+        </div>
+      </div>
+    </div>
+  <button class = 'slider-next'></button>
+</div>
+</div>
+<div class="list-store-product">
+{% for product in products %}
+<div class="store-product">
   <img class ='img-store-preview' src="{{ product.imgURL }}" alt="">
-  цена:{{ product.price }} ₽<br>
-  <button data-product = "{{ product.id }}" data-action="add" class="update-cart">Add to Cart</button>
+  <div class="store-product-name">
+    {{ product.name }}
+  </div>
+  <div class="store-product-author">
+    {{ product.author}}
+  </div>
+
+  <div class="store-product-buy">
+    <div class="store-product-buy-price">
+      {{ product.price }} ₽
+    </div>
+    <button data-product = "{{ product.id }}" data-action="add" class="update-cart">Купить</button>
+  </div>
+
+</div>
+
 
 {% endfor %}
 
+</div>
 {% endblock %}

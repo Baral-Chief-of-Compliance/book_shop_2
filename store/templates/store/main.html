@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" type = "text/css" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   </head>
   <body>
   <div class="header-information">
@@ -29,31 +30,31 @@
   </div>
   <div class="header-search">
     <div class="header-logo">
-      <object type="image/svg+xml" data="{% static 'images/logo.svg' %}" width="200" height="200"></object>
+      <object type="image/svg+xml" data="{% static 'images/logo.svg' %}" width="150" height="150"></object>
     </div>
     <div class="header-name">
       ЧИТАЙКА
     </div>
+    <div class="header-search-catalog">
+        Каталог
+    </div>
     <div class="header-search-bar">
       <form>
-        <input type="text" placeholder="Искать здесь...">
+        <input type="text" placeholder="Найти книгу...">
         <button type="submit"></button>
     </form>
+    </div>
+    <div class="cart-form">
+      <a href="{% url 'cart' %}">Корзина</a>
+      <div class="cart-information">
+        Количестов товаров:
+        <p id="cart-total">{{ cartItems }}</p>
+      </div>
     </div>
   </div>
   <div class="header-line"></div>
     <div class="header-navigation" id = "myTopnav">
-      <a href="{% url 'store' %}">Store</a>
-    <div class="cart-form">
-
-      <a href="{% url 'cart' %}">Корзина</a>
-      <div class="">
-        Количестов товаров:
-
-      </div>
-      <p id="cart-total">{{ cartItems }}</p>
-
-    </div>
+      <!-- <a href="{% url 'store' %}">Store</a> -->
     </div>
     <div class="wrapper">
       <div class="content">
@@ -62,7 +63,7 @@
         {% endblock %}
       </div>
       <div class="map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d715.8550792942056!2d33.080891951923824!3d68.97096873183611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x443410290f54229b%3A0x82bb73d80d0ca8d6!2z0J_Rg9GI0LrQuNC90YHQutCw0Y8g0YPQuy4sIDEyLCDQnNGD0YDQvNCw0L3RgdC6LCDQnNGD0YDQvNCw0L3RgdC60LDRjyDQvtCx0LsuLCAxODMwMzg!5e0!3m2!1sru!2sru!4v1647461284590!5m2!1sru!2sru" width="1920" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d715.8550792942056!2d33.080891951923824!3d68.97096873183611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x443410290f54229b%3A0x82bb73d80d0ca8d6!2z0J_Rg9GI0LrQuNC90YHQutCw0Y8g0YPQuy4sIDEyLCDQnNGD0YDQvNCw0L3RgdC6LCDQnNGD0YDQvNCw0L3RgdC60LDRjyDQvtCx0LsuLCAxODMwMzg!5e0!3m2!1sru!2sru!4v1647461284590!5m2!1sru!2sru" width="1902" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
     </div>
 
@@ -73,7 +74,7 @@
               О компании
             </div>
             <div class="about-footer">
-                <a href="#">О «Буквоеде»</a>
+                <a href="#">О «Читайке»</a>
                 <a href="#">Бонусная программа</a>
                 <a href="#">Открытые вакансии</a>
             </div>
@@ -121,7 +122,7 @@
                 +7 228 228-22-80
             </div>
             <div class="footer-information-app">
-                Мобильное приложение<br> «Буквоеда»
+                Мобильное приложение<br> «Читайка»
             </div>
             <div class="footer-information-imgs">
               <object class='f-img'type="image/svg+xml" data="{% static 'images/app-store.svg' %}" width="100" height="50"></object>
@@ -135,7 +136,7 @@
         </div>
         <div class="near-footer">
           <div class="fr-near-footer">
-              2006-2022, ООО «Буквоед»
+              2006-2022, ООО «Читайка»
           </div>
           <div class="sc-near-footer">
             <div class="sc-near-footer-title">
@@ -195,5 +196,6 @@
 
         console.log('Cart:', cart)
       </script>
+      <script type="text/javascript" src={% static "js/slider.js" %}></script>
   </body>
 </html>
