@@ -6,9 +6,11 @@
 
 {% block content%}
 
-
-<h3>Cart</h3>
-<a href="{% url 'store' %}">Продолжить покупки</a>
+<div class="cart-main-content">
+<h3>Корзина</h3>
+<div class="continue-button">
+  <a href="{% url 'store' %}">← Продолжить покупки</a>
+</div>
 <div class="table">
   Items: <strong>3</strong>
   Total: <strong>400 рублей</strong>
@@ -16,12 +18,6 @@
 </div>
 <div class="">
   <div class="cart-row">
-    <div class="">
-      Image
-    </div>
-    <div class="">
-      Item
-    </div>
     <div class="">
       Price: {{ order.get_cart_total }}
     </div>
@@ -33,16 +29,43 @@
     </div>
   </div>
 </div>
-<div class="">
+<div class="cart-list-products">
   {% for item in items %}
-    <img src="{{ item.product.imgURL }}" alt=""><br>
-    {{ item.product.name }}<br>
-    {{ item.get_total }} ₽<br>
-    {{ item.quantity }}<br>
-    <div class="">
+    <div class="cart-product">
+
+    <img src="{{ item.product.imgURL }}" alt="">
+    <div class="cart-product-text">
+
+
+    <div class="cart-product-information">
+      <div class="cart-product-information-name">
+        {{ item.product.name }}
+      </div>
+      <div class="cart-product-information-author">
+        {{ item.product.author }}
+      </div>
+    </div>
+    <div class="cart-price">
+      {{ item.product.price }} ₽
+    </div>
+    <div class="cart-quantity">
+      {{ item.quantity }}
+    </div>
+
+    <div class="cart-button">
+
       <img data-product = "{{ item.product.id }}" data-action="add" class = "update-cart" src="{% static 'images/up.png'%}" alt="">
       <img data-product = "{{ item.product.id }}" data-action="remove" class = "update-cart" src="{% static 'images/down.png'%}" alt="">
     </div>
+    <div class="cart-total">
+      {{ item.get_total }} ₽
+    </div>
+
+
+  </div>
+
+  </div>
   {% endfor %}
+</div>
 </div>
 {% endblock %}
