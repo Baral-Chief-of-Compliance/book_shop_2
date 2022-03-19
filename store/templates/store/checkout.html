@@ -5,6 +5,10 @@
 
 
 {% block content%}
+<div class="checkout-content">
+
+<div class="checkout-form">
+
 <div class="" id ="form-wrapper">
   <form id="form">
     <div id="user-info">
@@ -17,49 +21,66 @@
     </div>
 
     <div id="shipping-info">
-      <hr>
-      <p>Shipping information</p>
-      <hr>
+      <p>Платежная информация</p>
       <div class="form-field">
-        <input class="form-control" type="text" name="address" placeholder="Address..">
+        <input class="form-control" type="text" name="address" placeholder="Адрес..">
       </div>
       <div class="form-field">
-        <input class="form-control" type="text" name="city" placeholder="City..">
+        <input class="form-control" type="text" name="city" placeholder="Город..">
       </div>
       <div class="form-field">
-        <input class="form-control" type="text" name="state" placeholder="State..">
+        <input class="form-control" type="text" name="state" placeholder="Область..">
       </div>
       <div class="form-field">
-        <input class="form-control" type="text" name="zipcode" placeholder="Zipcode..">
+        <input class="form-control" type="text" name="zipcode" placeholder="Индекс..">
       </div>
       <div class="form-field">
-        <input class="form-control" type="text" name="country" placeholder="Country..">
+        <input class="form-control" type="text" name="country" placeholder="Страна..">
       </div>
     </div>
 
-    <hr>
-    <input id="form-button" type="submit" value="Continue">
+    <input id="form-button" type="submit" value="Продолжить">
   </form>
 </div>
 <div class="">
-  <br>
   <div id = "payment-info" class = "hidden">
-    Paypal Options
-    <button id = "make-payment">Make payment</button>
+    <button id = "make-payment">Оформить заказ</button>
   </div>
 </div>
 
-<h3>Chekout</h3>
+</div>
+
+<div class="checkout-cart">
+
+<h3>Итог заказа</h3>
 {% for item in items %}
-  <img src="{{ item.product.imgURL }}" alt=""><br>
-  {{ item.product.name }}<br>
-  {{ item.product.price}}<br>
-  {{ item.quantity }}<br>
+<div class="checkout-item">
 
+  <img src="{{ item.product.imgURL }}" alt="">
+  <div class="checkout-item-information">
+
+  <div class="checkout-item-name">
+    {{ item.product.name }}
+  </div>
+  <div class="checkout-item-price">
+    {{ item.product.price}} ₽
+  </div>
+  <div class="checkout-item-quantity">
+    x{{ item.quantity }}
+  </div>
+
+  </div>
+
+</div>
 {% endfor %}
+<div class="total-and-price">
+  <strong>Количество: {{ order.get_cart_items }}</strong>
+  <strong>Сумма заказ: {{ order.get_cart_total }} ₽</strong>
+</div>
 
-Количество:{{ order.get_cart_items }}<br>
-Сумма заказ:{{ order.get_cart_total }}
+
+</div>
+</div>
 <script type="text/javascript">
   var shipping = '{{ order.shipping }}'
   var total = '{{ order.get_cart_total }}'

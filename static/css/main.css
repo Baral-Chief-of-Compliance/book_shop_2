@@ -207,6 +207,11 @@ html,body{
 	font-size: 30px;
 }
 
+.header-name a{
+	text-decoration: none;
+	color: #000;
+}
+
 .header-search-catalog{
 	border: 2px solid #e02d4a;
 	border-radius: 5px;
@@ -486,4 +491,131 @@ html,body{
 .continue-button{
 	border: 2px solid #e1e1e1;
 	border-radius: 3px;
+	width: 220px;
+	padding: 10px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.continue-button a{
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+}
+
+.cart-line{
+	border: 1px solid #000;
+	width: 220px;
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+.cart-layout{
+	border: 2px solid #3b75b4;
+	background: #3b75b4;
+	border-radius: 3px;
+	width: 220px;
+	padding: 10px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.cart-layout a{
+	text-decoration: none;
+	font-weight: bold;
+	color: #fff;
+}
+
+.checkout-content{
+	margin-left: 20%;
+	margin-right: 20%;
+	display: flex;
+	flex-direction: row;
+}
+
+.checkout-item{
+	display: flex;
+	flex-direction: row;
+	border-top: 1px solid #e1e1e1;
+	border-bottom: 1px solid #e1e1e1;
+	padding: 20px;
+	width: 600px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+}
+
+.checkout-item img{
+	width: 100px;
+	height: 160px;
+
+}
+
+.checkout-item-information{
+	display: flex;
+	flex-direction: row;
+	padding-top: 40px;
+}
+
+.checkout-item-name{
+	padding-left: 100px;
+}
+
+.checkout-item-price{
+	padding-left: 20px;
+}
+
+.checkout-item-quantity{
+	padding-left: 20px;
+}
+
+.checkout-cart h3{
+	border-top: 1px solid #e1e1e1;
+	padding-top: 20px;
+	padding-left: 20px;
+
+}
+
+.checkout-content {
+	padding-top: 25px;
+}
+
+.checkout-form input{
+	padding: 10px;
+	border: 1px solid #e1e1e1;
+	border-radius: 3px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.checkout-form{
+	padding-right: 50px;
+}
+
+#shipping-info p{
+	font-weight: bold;
+}
+
+#form-button{
+	font-weight: bold;
+	color: white;
+	border: 2px solid #3b75b4;
+	background: #3b75b4;
+	border-radius: 3px;
+	width: 190px;
+}
+
+.total-and-price{
+	display: flex;
+	flex-direction: column;
+}
+
+#payment-info button{
+	font-weight: bold;
+	color: white;
+	border: 2px solid #0aa472;
+	background: #0aa472;
+	border-radius: 3px;
+	padding: 10px;
+	width: 190px;
 }

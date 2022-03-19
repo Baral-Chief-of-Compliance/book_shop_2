@@ -12,23 +12,15 @@
   <a href="{% url 'store' %}">← Продолжить покупки</a>
 </div>
 <div class="table">
-  Items: <strong>3</strong>
-  Total: <strong>400 рублей</strong>
-  <a href="{% url 'checkout' %}">Чек</a>
-</div>
-<div class="">
-  <div class="cart-row">
-    <div class="">
-      Price: {{ order.get_cart_total }}
-    </div>
-    <div class="">
-      Количество: {{ order.get_cart_items }}
-    </div>
-    <div class="">
-      Total
-    </div>
+  Товаров: <strong>{{ order.get_cart_items }}</strong>
+  <div class="cart-line"></div>
+  Сумма: <strong>{{ order.get_cart_total }} ₽</strong>
+  <div class="cart-layout">
+    <a href="{% url 'checkout' %}">Перейти к оформлению</a>
   </div>
+
 </div>
+
 <div class="cart-list-products">
   {% for item in items %}
     <div class="cart-product">
