@@ -7,7 +7,12 @@
 {% block content%}
 <div class="checkout-content">
 
+
+
 <div class="checkout-form">
+  <div class="return-cart">
+    <a href="{% url 'cart' %}">← Вернуться в корзину</a>
+  </div>
 
 <div class="" id ="form-wrapper">
   <form id="form">
@@ -22,6 +27,7 @@
 
     <div id="shipping-info">
       <p>Платежная информация</p>
+
       <div class="form-field">
         <input class="form-control" type="text" name="address" placeholder="Адрес..">
       </div>
@@ -74,8 +80,13 @@
 </div>
 {% endfor %}
 <div class="total-and-price">
-  <strong>Количество: {{ order.get_cart_items }}</strong>
-  <strong>Сумма заказ: {{ order.get_cart_total }} ₽</strong>
+  <div class="total-and-price-q">
+    <strong>Количество: {{ order.get_cart_items }}</strong>
+  </div>
+  <div class="total-and-price-p">
+    <strong>Сумма заказ: {{ order.get_cart_total }} ₽</strong>
+  </div>
+
 </div>
 
 

@@ -1,0 +1,13 @@
+{% extends 'store/main.html' %}
+{% load static %}
+
+
+{% block content %}
+<img src="{{ book.img.url }}" alt=""><br>
+{{ book.name }}<br>
+{{ book.description }}<br>
+{{ book.price }}<br>
+{{ book.author }}<br>
+{{ book.group }}<br>
+<button data-product = "{{ book.id }}" data-action="add" class="update-cart">Купить</button>
+{% endblock %}

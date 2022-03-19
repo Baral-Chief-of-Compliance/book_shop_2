@@ -18,6 +18,31 @@ def store(request):
     return render (request, 'store/store.html', context)
 
 
+def book(request, book_id):
+
+    data = cartData(request)
+
+    cartItems = data['cartItems']
+    order = data['order']
+    items = data['items']
+
+    book = Product.objects.get(id = book_id)
+    context = {'book':book}
+
+    return render(request, 'store/book.html', context)
+
+
+def catalog(request):
+    data = cartData(request)
+
+    cartItems = data['cartItems']
+    order = data['order']
+    items = data['items']
+
+    products = Product.objects.all()
+    context = {'products': products, 'cartItems':cartItems,}
+    return render (request, 'store/catalog.html', context)
+
 def cart(request):
     data = cartData(request)
 
@@ -27,6 +52,7 @@ def cart(request):
 
     context = {'items': items, 'order':order, 'cartItems':cartItems}
     return render (request, 'store/cart.html', context)
+
 
 
 from django.views.decorators.csrf import csrf_exempt

@@ -1,0 +1,27 @@
+{% extends 'store/main.html' %}
+{% load static %}
+
+{% block content %}
+<div class="catalog-list-store-product">
+{% for product in products %}
+<div class="store-product">
+  <img class ='img-store-preview' src="{{ product.imgURL }}" alt="">
+  <div class="store-product-name">
+    {{ product.name }}
+  </div>
+  <div class="store-product-author">
+    {{ product.author}}
+  </div>
+
+  <div class="store-product-buy">
+    <div class="store-product-buy-price">
+      {{ product.price }} ₽
+    </div>
+    <button data-product = "{{ product.id }}" data-action="add" class="update-cart">Купить</button>
+  </div>
+
+</div>
+
+
+{% endfor %}
+{% endblock %}
