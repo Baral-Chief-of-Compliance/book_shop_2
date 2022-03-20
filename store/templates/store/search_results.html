@@ -1,0 +1,38 @@
+{% extends 'store/main.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="search-results-content">
+
+  {% for book in object_list %}
+
+
+    <div class="search-product">
+    <a href="/book/{{ book.id }}">
+    <img src="{{ book.img.url }}" alt="">
+    </a>
+    <div class="search-product-text">
+
+
+    <div class="search-product-information">
+      <div class="search-product-information-name">
+        {{ book.name }}
+      </div>
+      <div class="search-product-information-author">
+        {{ book.author }}
+      </div>
+    </div>
+    <div class="search-price">
+      {{ book.price }} ₽
+    </div>
+
+  </div>
+  <button data-product = "{{ book.id }}" data-action="add" class="update-cart">Купить</button>
+  </div>
+    {% empty %}
+    По вашему запросу ничего не найдено
+  {% endfor %}
+
+</div>
+{% endblock %}

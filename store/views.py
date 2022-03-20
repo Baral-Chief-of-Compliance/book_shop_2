@@ -4,6 +4,9 @@ import json
 import datetime
 from store.models import *
 from . utils import cookieCart, cartData, guestOrder
+from django.views.generic import ListView
+from django.db.models import Q
+
 
 def store(request):
 
@@ -14,7 +17,7 @@ def store(request):
     items = data['items']
 
     products = Product.objects.all()
-    context = {'products': products[:5], 'cartItems':cartItems,}
+    context = {'products': products[:5], 'cartItems':cartItems,'order':order, 'items': items,}
     return render (request, 'store/store.html', context)
 
 
@@ -27,7 +30,7 @@ def book(request, book_id):
     items = data['items']
 
     book = Product.objects.get(id = book_id)
-    context = {'book':book}
+    context = {'book':book,'cartItems':cartItems,'order':order, 'items': items,}
 
     return render(request, 'store/book.html', context)
 
@@ -40,7 +43,7 @@ def catalog(request):
     items = data['items']
 
     products = Product.objects.all()
-    context = {'products': products, 'cartItems':cartItems,}
+    context = {'products': products, 'cartItems':cartItems, 'order':order, 'items': items,}
     return render (request, 'store/catalog.html', context)
 
 def cart(request):
@@ -127,3 +130,29 @@ def processOrder(request):
         )
 
     return JsonResponse('Payment subbmitted..', safe = False)
+
+
+
+
+
+    template_name = 'store/search_results.html'
+
+def get_queryset(request):
+
+    data = cartData(request)
+
+    cartItems = data['cartItems']
+    order = data['order']
+    items = data['items']
+
+    quary = request.GET.get('q')
+    object_list = Product.objects.filter(
+        Q(name__icontains=quary)|Q(author__icontains=quary)
+    )
+
+    context = {'object_list':object_list,'cartItems':cartItems,'order':order, 'items': items,}
+
+    return render (request, 'store/search_results.html', context)
+
+
+    # def search_request(request):

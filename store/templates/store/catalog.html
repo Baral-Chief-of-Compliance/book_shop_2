@@ -5,10 +5,12 @@
 <div class="catalog-list-store-product">
 {% for product in products %}
 <div class="store-product">
+  <a href="/book/{{ product.id }}">
   <img class ='img-store-preview' src="{{ product.imgURL }}" alt="">
   <div class="store-product-name">
     {{ product.name }}
   </div>
+  </a>
   <div class="store-product-author">
     {{ product.author}}
   </div>

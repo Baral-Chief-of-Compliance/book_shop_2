@@ -39,8 +39,8 @@
         <a href="{% url 'catalog' %}">Каталог</a>
     </div>
     <div class="header-search-bar">
-      <form>
-        <input type="text" placeholder="Найти книгу...">
+      <form action = "{% url 'search_results' %}" method="get">
+        <input type="text" name='q' placeholder="Найти книгу...">
         <button type="submit"></button>
     </form>
     </div>

@@ -3,11 +3,34 @@
 
 
 {% block content %}
-<img src="{{ book.img.url }}" alt=""><br>
-{{ book.name }}<br>
-{{ book.description }}<br>
-{{ book.price }}<br>
-{{ book.author }}<br>
-{{ book.group }}<br>
-<button data-product = "{{ book.id }}" data-action="add" class="update-cart">Купить</button>
+<div class="book-info">
+
+<img src="{{ book.img.url }}" alt="">
+<div class="book-short-info">
+
+<div class="book-name">
+  {{ book.name }}
+</div>
+<div class="book-author">
+  {{ book.author }}
+</div>
+<div class="book-group">
+  {{ book.group }}
+</div>
+
+<div class="book-description">
+  {{ book.description }}
+</div>
+
+</div>
+
+<div class="book-buy-info">
+  <div class="book-buy-info-price">
+    {{ book.price }} ₽
+  </div>
+  <button data-product = "{{ book.id }}" data-action="add" class="update-cart">Купить</button>
+</div>
+
+
+</div>
 {% endblock %}
