@@ -338,6 +338,7 @@ html,body{
 	padding-left: 50px;
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	padding-bottom: 75px;
 }
 
@@ -791,4 +792,140 @@ html,body{
 	margin-left: 100px;
 	font-weight: bold;
 	padding-top: 10px;
+}
+@media screen and (max-width: 1900px){
+	.map{
+		display: none;
+	}
+
+}
+
+
+@media screen and (max-width: 1600px){
+	.store-slider{
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+
+	.store-sale{
+		margin-left: 16%;
+		margin-right: 16%;
+	}
+	.list-store-product{
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+	.search-results-content{
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+}
+
+@media screen and (max-width: 1573px){
+	.list-store-product{
+		margin-left: 13%;
+		margin-right: 13%;
+	}
+	.cart-main-content{
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+}
+
+@media screen and (max-width: 1504px){
+	.list-store-product{
+		margin-left: 23%;
+		margin-right: 23%;
+	}
+
+	.header-name{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1423px){
+	.list-store-product{
+		margin-left: 300px;
+		margin-right: 300px;
+
+	}
+}
+
+@media screen and (max-width: 1423px){
+	.list-store-product{
+		margin-left: 20%;
+		margin-right: 20%;
+
+	}
+	.above-footer{
+		padding-left: 0px;
+	}
+}
+
+@media screen and (max-width: 1273px){
+	.list-store-product{
+		margin-left: 20%;
+		margin-right: 15%;
+	}
+	.header-search-bar input{
+		width: 300px;
+	}
+	.header-search-bar form{
+		width: 300px;
+	}
+	.header-search{
+		padding-left: 20%;
+	}
+}
+
+@media screen and (max-width: 1181px){
+	.list-store-product{
+		margin-left: 200px;
+		margin-right: 0px;
+	}
+	.above-footer{
+		flex-direction: column;
+				padding-left: 35%;
+	}
+	.near-footer{
+		flex-direction: column;
+	}
+	.footer-line{
+		display: none;
+	}
+
+}
+
+@media screen and (max-width: 1050px){
+	.list-store-product{
+		margin-left: 100px;
+		padding-left: 0px;
+		margin-right: 0px;
+	}
+	.header-information-vakansii{
+		padding-left: 200px;
+	}
+	.header-search{
+		padding-left: 100px;
+	}
+
+}
+@media screen and (max-width: 1450px){
+	.store-slider{
+		display: none;
+	}
+
+	.store-sale{
+		display: none;
+	}
+	.search-product-text{
+		padding-left: 10px;
+	}
+	.search-price{
+		margin-left: 20px;
+	}
+	.cart-main-content{
+		margin-left: 10%;
+		margin-right: 10%;
+	}
 }
