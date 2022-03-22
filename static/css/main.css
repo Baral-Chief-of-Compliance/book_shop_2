@@ -893,7 +893,42 @@ html,body{
 	.footer-line{
 		display: none;
 	}
-
+	.cart-product{
+		flex-direction: column;
+	}
+	.cart-product-text{
+		flex-direction: column;
+		padding-left: 50px;
+	}
+	.cart-price{
+		margin-left: 3%;
+	}
+	.cart-total{
+		margin-left: 3%;
+	}
+	.cart-quantity{
+		margin-left: 7%;
+	}
+	.cart-product-information{
+		padding-left: 0px;
+		margin-left: 0px;
+	}
+	.cart-product img{
+		padding-left: 0px;
+		margin-left: 50px;
+	}
+	.cart-button img{
+		margin-left: 0px;
+	}
+	.checkout-content{
+		flex-direction: column;
+	}
+	.checkout-item-information{
+		flex-direction: column;
+	}
+	.checkout-item-name{
+		padding-left: 20px;
+	}
 }
 
 @media screen and (max-width: 1050px){
@@ -929,3 +964,27 @@ html,body{
 		margin-right: 10%;
 	}
 }
+
+@media screen and (max-width: 900px){
+	.header-information-vakansii{
+		padding-left: 50px;
+		}
+		.header-information-number{
+			display: none;
+		}
+		.header-search{
+			flex-direction:column;
+		}
+		.header-logo{
+			margin-left: 25%;
+		}
+		.header-search-catalog{
+			width: 86px;
+			margin-left: 33%;
+		}
+		.header-search-bar{
+			padding-left: 0px;
+			margin-left: 0px;
+		}
+
+	}
